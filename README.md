@@ -1,12 +1,16 @@
 # Weather-data-web-scrape
 ## Objective
-The weather data was used for training a prediction model for business usage.
-## Target website
-Taiwan government hourly weather stations report website
+The primary objective of this project was to collect and preprocess weather data in each city and district for training a predictive model for business applications.
+
+## Target Website
+I focused on extracting data from the Taiwan government's hourly weather stations reporting website.
+
 ## Process
-1. Scraped each weather station report
-2. Cleaned unmeaningfull values
-3. Merged station weather report with its station information to get its city/district
-4. Averaged the rain volume data by city/district/record date/record hour
-5. Filled in missing value with the average value of its previous hour and later hour rain volume record
-6. Checked valid data proportion
+The data collection and preprocessing process involved the following steps:
+
+1. Data Scraping: Scraped data using BeautifulSoup.
+2. Data Cleaning: Removed meaningless or erroneous values from the collected rainfall volumes (rain_mm) data.
+3. Data Integration: Combined the station-specific weather data with their respective station information to associate each record with its corresponding city or district.
+4. Data Aggregation: Calculated average rainfall volumes (rain_mm) by city, district, record date, and record hour.
+5. Missing Data Imputation: Filled in the gaps by using the average values from the previous hour and the subsequent hour's rainfall volume (rain_mm) records.
+6. Data Validation: Verified the proportion of valid data in the dataset.
